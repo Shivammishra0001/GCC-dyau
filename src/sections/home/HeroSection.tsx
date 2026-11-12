@@ -48,24 +48,24 @@ export function HeroSection() {
           transition={{ duration: 1.4, ease: easeOut }}
         />
       </div>
-      {/* readability gradients: left column only + soft base, image stays bright elsewhere */}
-      <div className="absolute inset-y-0 left-0 w-full bg-[linear-gradient(90deg,rgba(8,6,6,0.82)_0%,rgba(8,6,6,0.6)_32%,rgba(8,6,6,0.22)_58%,rgba(8,6,6,0)_78%)] lg:w-[78%]" aria-hidden="true" />
-      <div className="absolute inset-x-0 bottom-0 h-[55%] bg-[linear-gradient(180deg,rgba(8,6,6,0)_0%,rgba(8,6,6,0.62)_100%)]" aria-hidden="true" />
-      <div className="absolute inset-x-0 top-0 h-[var(--header-h)] bg-[linear-gradient(180deg,rgba(0,0,0,0.28),rgba(0,0,0,0))]" aria-hidden="true" />
+      {/* light, left-weighted gradient only: keeps copy legible without shading the façade */}
+      <div className="absolute inset-y-0 left-0 w-full bg-[linear-gradient(90deg,rgba(8,6,6,0.66)_0%,rgba(8,6,6,0.46)_40%,rgba(8,6,6,0.12)_80%,rgba(8,6,6,0)_100%)] lg:w-[72%] lg:bg-[linear-gradient(90deg,rgba(8,6,6,0.5)_0%,rgba(8,6,6,0.3)_26%,rgba(8,6,6,0)_52%)]" aria-hidden="true" />
+      <div className="absolute inset-x-0 bottom-0 h-[34%] bg-[linear-gradient(180deg,rgba(8,6,6,0)_0%,rgba(8,6,6,0.38)_100%)]" aria-hidden="true" />
+      <div className="absolute inset-x-0 top-0 h-[var(--header-h)] bg-[linear-gradient(180deg,rgba(0,0,0,0.22),rgba(0,0,0,0))]" aria-hidden="true" />
 
-      <motion.div className="container-x relative pt-[calc(var(--header-h)+3rem)] pb-14 md:pb-20" style={reduce ? undefined : { y: copyY, opacity: copyOpacity }}>
+      <motion.div className="relative w-full px-[clamp(1rem,4vw,4.5rem)] pt-[calc(var(--header-h)+3rem)] pb-14 md:pb-20" style={reduce ? undefined : { y: copyY, opacity: copyOpacity }}>
         <div className="max-w-2xl">
-          <motion.p className="eyebrow eyebrow-rule text-white [text-shadow:0_1px_12px_rgba(0,0,0,0.5)]" custom={0} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
+          <motion.p className="eyebrow eyebrow-rule text-white/90" custom={0} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
             {hero.eyebrow}
           </motion.p>
-          <motion.h1 id="hero-heading" className="display-xl mt-5 [text-shadow:0_2px_28px_rgba(0,0,0,0.55)]" custom={1} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
+          <motion.h1 id="hero-heading" className="display-xl mt-5 [text-shadow:0_1px_2px_rgba(0,0,0,0.25)]" custom={1} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
             {hero.headingLines.map((line, i) => (
               <span key={line} className={i === hero.headingLines.length - 1 ? 'italic text-white/95' : 'block'}>
                 {line}{' '}
               </span>
             ))}
           </motion.h1>
-          <motion.p className="lede mt-6 max-w-xl text-white [text-shadow:0_1px_16px_rgba(0,0,0,0.5)]" custom={2} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
+          <motion.p className="lede mt-6 max-w-xl text-white/95 [text-shadow:0_1px_2px_rgba(0,0,0,0.3)]" custom={2} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
             {hero.body}
           </motion.p>
           <motion.div className="mt-8 flex flex-wrap gap-3" custom={3} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
