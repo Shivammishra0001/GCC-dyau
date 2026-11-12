@@ -1,0 +1,63 @@
+/* DYAU design tokens — single source of truth for colour, type, spacing and motion.
+   Consumed by Tailwind v4 via @theme in global.css and by plain CSS via var(). */
+:root {
+  /* Brand neutrals */
+  --dy-black: #000000;
+  --dy-ink: #0f0f0f;
+  --dy-charcoal: #171717;
+  --dy-charcoal-2: #262626;
+  --dy-graphite: #3d3d3d;
+  --dy-stone: #6b6a66;
+  --dy-mist: #a3a19b;
+  --dy-line: #e6e3dc;
+  --dy-sand: #f1eee7;
+  --dy-offwhite: #f7f6f3;
+  --dy-white: #ffffff;
+
+  /* Accent */
+  --dy-orange: #ff570a;
+  --dy-orange-deep: #e04600;
+  --dy-orange-soft: #ffe8dc;
+
+  /* Semantic */
+  --color-bg: var(--dy-white);
+  --color-bg-alt: var(--dy-offwhite);
+  --color-fg: var(--dy-ink);
+  --color-fg-muted: var(--dy-stone);
+  --color-border: var(--dy-line);
+  --color-accent: var(--dy-orange);
+  --color-accent-fg: var(--dy-white);
+  --color-focus: var(--dy-orange);
+
+  /* Type */
+  --font-display: 'Instrument Serif', 'Times New Roman', Georgia, serif;
+  --font-sans: 'Manrope Variable', 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --container-max: 1320px;
+  --gutter: 1rem;
+  --header-h: 4.5rem;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 320ms;
+  --dur-slow: 640ms;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 2rem;
+    --header-h: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --gutter: 3rem;
+  }
+}
