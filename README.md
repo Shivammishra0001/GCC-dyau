@@ -42,5 +42,7 @@ reference/         source PDFs and extracted text (structure reference only; not
 - **Add testimonials / case studies / team:** create a content file, a section and a route; the V1 components were removed to avoid shipping placeholders.
 
 ## Deployment
-Static SPA — serve `dist/` with history fallback to `index.html` (`public/_redirects` included). Set `site.url` in `src/content/site.ts` to the production origin.
+Deployed on **DigitalOcean App Platform** as a static site (app `gcc`, region BLR), built from `main` of `Shivammishra0001/GCC-dyau` with `pnpm install --frozen-lockfile && pnpm build`, output `dist`, catch-all `index.html` for client-side routing. Every push to `main` redeploys automatically. Live: https://gcc-9muow.ondigitalocean.app
+
+To attach a custom domain, add it under the app's Settings → Domains in the DigitalOcean console and point DNS at the provided CNAME, then set `site.url` in `src/content/site.ts` to the production origin for canonical/OG tags.
 # GCC-dyau
