@@ -3,9 +3,9 @@ import type { Cta, ImageAsset, ValuePoint } from '../types/content'
 /** Original Dyau homepage copy. Facts are limited to the confirmed positioning (V2 brief §2). */
 export const hero = {
   eyebrow: 'Recruitment & Talent Solutions',
-  headingLines: ['Exceptional talent,', 'wherever your business', 'needs it.'],
-  body: 'Talent is a recruitment and talent-solutions consultancy founded in India and built to serve organisations worldwide. We connect ambitious companies with the people who move them forward.',
-  primaryCta: { label: 'Find Talent', to: '/hire-talent' } satisfies Cta,
+  headingLines: ['GCC Recruitment Specialists,'],
+  body: 'Talent is a recruitment and talent-solutions consultancy dedicated to connecting ambitious organisations with exceptional professionals. Through a quality-driven, people-first approach and a deep understanding of talent needs, we help businesses build high-performing teams, unlock potential and achieve lasting success.',
+  primaryCta: { label: 'Hire Talent', to: '/hire-talent' } satisfies Cta,
   secondaryCta: { label: 'Find a Job', to: '/find-a-job' } satisfies Cta,
   /** 'hawa-mahal' is the selected hero asset; 'sunset' remains as the earlier alternative. */
   image: 'hawa-mahal' as 'hawa-mahal' | 'sunset',
