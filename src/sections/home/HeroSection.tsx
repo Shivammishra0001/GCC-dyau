@@ -61,12 +61,12 @@ export function HeroSection() {
           <motion.h1 id="hero-heading" className="display-xl mt-5 text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.7),0_2px_14px_rgba(0,0,0,0.45)]" custom={1} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
             {hero.headingLines.map((line, i) => (
               <span key={line} className={i === hero.headingLines.length - 1 ? 'italic' : 'block'}>
-                <span className="hl">{line}</span>{' '}
+                {line}{' '}
               </span>
             ))}
           </motion.h1>
-          <motion.p className="lede mt-6 max-w-xl font-medium text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]" custom={2} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
-            <span className="hl">{hero.body}</span>
+          <motion.p className="lede mt-6 max-w-xl font-medium text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.75),0_2px_10px_rgba(0,0,0,0.5)]" custom={2} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
+            {hero.body}
           </motion.p>
           <motion.div className="mt-8 flex flex-wrap gap-3" custom={3} variants={item} initial={reduce ? false : 'hidden'} animate="visible">
             <Button to={hero.primaryCta.to} size="lg" arrow>

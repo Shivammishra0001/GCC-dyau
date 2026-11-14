@@ -105,14 +105,6 @@
     transition: background-size var(--dur-base) var(--ease-out);
   }
   .link-underline:hover, .link-underline:focus-visible { background-size: 100% 1px; }
-  /* translucent orange highlighter band behind running text (clones per line) */
-  .hl {
-    background: color-mix(in srgb, var(--dy-orange) 62%, transparent);
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    padding: 0.04em 0.3em;
-    margin-inline: -0.3em;
-  }
   .scrollbar-none { scrollbar-width: none; }
   .scrollbar-none::-webkit-scrollbar { display: none; }
 }
